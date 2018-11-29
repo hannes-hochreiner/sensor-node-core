@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name sensor-node-core)(type Legacy)(uri /home/hannes/Repository/sensor-node-core/kicad/sensor-node-core/sensor-node-core.lib)(options "")(descr ""))
+)

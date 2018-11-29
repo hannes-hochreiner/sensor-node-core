@@ -1,4 +1,552 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+LIBS:sensor-node-core-cache
+EELAYER 26 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L sensor-node-core:BU2032-1-G B1
+U 1 1 5C007176
+P 2400 4100
+F 0 "B1" H 2600 3850 50  0000 C CNN
+F 1 "BU2032-1-G" H 2350 4100 50  0000 C CNN
+F 2 "sensor-node-core:BU2032-1-G" H 2400 4100 50  0001 C CNN
+F 3 "" H 2400 4100 50  0001 C CNN
+	1    2400 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L sensor-node-core:CORTEX-DEBUG CD1
+U 1 1 5C0071D0
+P 9300 1900
+F 0 "CD1" H 9650 1400 60  0000 C CNN
+F 1 "CORTEX-DEBUG" V 9300 1900 60  0000 C CNN
+F 2 "sensor-node-core:CORTEX-DEBUG" H 9300 1900 60  0001 C CNN
+F 3 "" H 9300 1900 60  0001 C CNN
+	1    9300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L sensor-node-core:RFM98 RFM1
+U 1 1 5C007237
+P 2750 1800
+F 0 "RFM1" H 2950 1300 60  0000 C CNN
+F 1 "RFM98" V 2750 1800 60  0000 C CNN
+F 2 "sensor-node-core:RFM98" H 2750 1800 60  0001 C CNN
+F 3 "https://github.com/SeeedDocument/RFM95-98_LoRa_Module/blob/master/RFM95_96_97_98_DataSheet.pdf" H 2750 1800 60  0001 C CNN
+	1    2750 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L sensor-node-core:STM32L021K4T6 STM1
+U 1 1 5C0072B7
+P 7000 4450
+F 0 "STM1" H 7450 3750 60  0000 L CNN
+F 1 "STM32L021K4T6" H 6600 4450 60  0000 L CNN
+F 2 "official stable:LQFP-32_7x7mm_P0.8mm" H 7000 4450 60  0001 C CNN
+F 3 "" H 7000 4450 60  0001 C CNN
+	1    7000 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L sensor-node-core:Sensor-Connector SC1
+U 1 1 5C007324
+P 3050 6300
+F 0 "SC1" H 3500 5800 50  0000 C CNN
+F 1 "Sensor-Connector" V 3050 6300 50  0000 C CNN
+F 2 "sensor-node-core:M50-3150542R" H 3050 6300 50  0001 C CNN
+F 3 "" H 3050 6300 50  0001 C CNN
+	1    3050 6300
+	1    0    0    -1  
+$EndComp
+Text Label 2950 4000 0    50   ~ 0
+3V3
+Wire Wire Line
+	2750 4000 2950 4000
+$Comp
+L power:GND #PWR03
+U 1 1 5C0074A2
+P 2950 4300
+F 0 "#PWR03" H 2950 4050 50  0001 C CNN
+F 1 "GND" H 2955 4127 50  0000 C CNN
+F 2 "" H 2950 4300 50  0001 C CNN
+F 3 "" H 2950 4300 50  0001 C CNN
+	1    2950 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 4200 2950 4200
+Wire Wire Line
+	2950 4200 2950 4300
+$Comp
+L power:GND #PWR01
+U 1 1 5C00759A
+P 2050 2300
+F 0 "#PWR01" H 2050 2050 50  0001 C CNN
+F 1 "GND" H 2055 2127 50  0000 C CNN
+F 2 "" H 2050 2300 50  0001 C CNN
+F 3 "" H 2050 2300 50  0001 C CNN
+	1    2050 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2300 2050 2150
+Wire Wire Line
+	2050 1450 2200 1450
+Wire Wire Line
+	2200 2150 2050 2150
+Connection ~ 2050 2150
+Wire Wire Line
+	2050 2150 2050 1450
+$Comp
+L Device:Antenna_Shield AE1
+U 1 1 5C00765A
+P 4100 1950
+F 0 "AE1" H 4240 1991 50  0000 L CNN
+F 1 "Antenna_Shield" H 4240 1900 50  0000 L CNN
+F 2 "sensor-node-core:MOLEX-0732511150" H 4100 2050 50  0001 C CNN
+F 3 "~" H 4100 2050 50  0001 C CNN
+	1    4100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5C007733
+P 4200 2300
+F 0 "#PWR04" H 4200 2050 50  0001 C CNN
+F 1 "GND" H 4205 2127 50  0000 C CNN
+F 2 "" H 4200 2300 50  0001 C CNN
+F 3 "" H 4200 2300 50  0001 C CNN
+	1    4200 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2300 4200 2250
+Wire Wire Line
+	4100 2150 3300 2150
+Wire Wire Line
+	3300 2050 3700 2050
+Wire Wire Line
+	3700 2050 3700 2250
+Wire Wire Line
+	3700 2250 4200 2250
+Connection ~ 4200 2250
+Wire Wire Line
+	4200 2250 4200 2150
+Text Label 4950 1750 0    50   ~ 0
+3V3
+Text Label 3500 1450 0    50   ~ 0
+RFM_DIO2
+Text Label 3500 1550 0    50   ~ 0
+RFM_DIO1
+Text Label 3500 1650 0    50   ~ 0
+RFM_DIO0
+Text Label 3500 1850 0    50   ~ 0
+RFM_DIO4
+Text Label 3500 1950 0    50   ~ 0
+RFM_DIO3
+Wire Wire Line
+	3300 1450 3500 1450
+Wire Wire Line
+	3300 1550 3500 1550
+Wire Wire Line
+	3300 1650 3500 1650
+Wire Wire Line
+	3300 1850 3500 1850
+Wire Wire Line
+	3300 1950 3500 1950
+Text Label 1800 1550 2    50   ~ 0
+RFM_SPI_MISO
+Text Label 1800 1650 2    50   ~ 0
+RFM_SPI_MOSI
+Text Label 1800 1750 2    50   ~ 0
+RFM_SPI_CLK
+Text Label 1800 1850 2    50   ~ 0
+~RFM_SPI_CS
+Text Label 1800 1950 2    50   ~ 0
+RFM_RESET
+Text Label 1800 2050 2    50   ~ 0
+RFM_DIO5
+Wire Wire Line
+	1800 2050 2200 2050
+Wire Wire Line
+	1800 1950 2200 1950
+Wire Wire Line
+	1800 1850 2200 1850
+Wire Wire Line
+	1800 1750 2200 1750
+Wire Wire Line
+	1800 1650 2200 1650
+Wire Wire Line
+	1800 1550 2200 1550
+Text Label 8450 1700 2    50   ~ 0
+3V3
+Wire Wire Line
+	8450 1700 8650 1700
+$Comp
+L power:GND #PWR07
+U 1 1 5C00939F
+P 8450 2350
+F 0 "#PWR07" H 8450 2100 50  0001 C CNN
+F 1 "GND" H 8455 2177 50  0000 C CNN
+F 2 "" H 8450 2350 50  0001 C CNN
+F 3 "" H 8450 2350 50  0001 C CNN
+	1    8450 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 2350 8450 2100
+Wire Wire Line
+	8450 1800 8650 1800
+Wire Wire Line
+	8650 1900 8450 1900
+Connection ~ 8450 1900
+Wire Wire Line
+	8450 1900 8450 1800
+Wire Wire Line
+	8650 2100 8450 2100
+Connection ~ 8450 2100
+Wire Wire Line
+	8450 2100 8450 1900
+Text Label 2100 6500 2    50   ~ 0
+SEN_GPIO_1
+Text Label 2100 6400 2    50   ~ 0
+SEN_I2C_SCL
+Text Label 2100 6300 2    50   ~ 0
+SEN_I2C_SDA
+Text Label 2100 6200 2    50   ~ 0
+3V3
+Wire Wire Line
+	2100 6200 2400 6200
+Wire Wire Line
+	2100 6300 2400 6300
+Wire Wire Line
+	2100 6400 2400 6400
+Wire Wire Line
+	2100 6500 2400 6500
+$Comp
+L power:GND #PWR02
+U 1 1 5C00C753
+P 2250 6750
+F 0 "#PWR02" H 2250 6500 50  0001 C CNN
+F 1 "GND" H 2255 6577 50  0000 C CNN
+F 2 "" H 2250 6750 50  0001 C CNN
+F 3 "" H 2250 6750 50  0001 C CNN
+	1    2250 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 6750 2250 6100
+Wire Wire Line
+	2250 6100 2400 6100
+Text Label 3900 6100 0    50   ~ 0
+SEN_SPI_MISO
+Text Label 3900 6200 0    50   ~ 0
+SEN_SPI_MOSI
+Text Label 3900 6300 0    50   ~ 0
+SEN_SPI_CLK
+Text Label 3900 6400 0    50   ~ 0
+~SEN_SPI_CS
+Text Label 3900 6500 0    50   ~ 0
+SEN_GPIO_2
+Wire Wire Line
+	3700 6500 3900 6500
+Wire Wire Line
+	3700 6400 3900 6400
+Wire Wire Line
+	3700 6300 3900 6300
+Wire Wire Line
+	3700 6200 3900 6200
+Wire Wire Line
+	3700 6100 3900 6100
+Text Label 10200 1700 0    50   ~ 0
+SWD_IO
+Text Label 10200 1800 0    50   ~ 0
+SWD_CLK
+Text Label 10200 2100 0    50   ~ 0
+~SWD_RST
+Wire Wire Line
+	10200 2100 9950 2100
+Wire Wire Line
+	9950 1800 10200 1800
+Wire Wire Line
+	9950 1700 10200 1700
+NoConn ~ 9950 1900
+Wire Wire Line
+	3300 1750 4900 1750
+$Comp
+L Device:C C2
+U 1 1 5C013446
+P 4900 2100
+F 0 "C2" H 5015 2146 50  0000 L CNN
+F 1 "0.1µF" H 5015 2055 50  0000 L CNN
+F 2 "official stable:C_0603_1608Metric" H 4938 1950 50  0001 C CNN
+F 3 "~" H 4900 2100 50  0001 C CNN
+	1    4900 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2250 4200 2250
+Wire Wire Line
+	4900 1950 4900 1750
+Connection ~ 4900 1750
+Wire Wire Line
+	4900 1750 4950 1750
+$Comp
+L Device:R R1
+U 1 1 5C014BF1
+P 6300 3300
+F 0 "R1" V 6093 3300 50  0000 C CNN
+F 1 "10k" V 6184 3300 50  0000 C CNN
+F 2 "official stable:C_0603_1608Metric" V 6230 3300 50  0001 C CNN
+F 3 "~" H 6300 3300 50  0001 C CNN
+	1    6300 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5C014C5F
+P 5750 3150
+F 0 "#PWR06" H 5750 2900 50  0001 C CNN
+F 1 "GND" H 5755 2977 50  0000 C CNN
+F 2 "" H 5750 3150 50  0001 C CNN
+F 3 "" H 5750 3150 50  0001 C CNN
+	1    5750 3150
+	-1   0    0    1   
+$EndComp
+Text Label 6850 3450 1    50   ~ 0
+SEN_I2C_SDA
+Text Label 6950 3450 1    50   ~ 0
+SEN_I2C_SCL
+Wire Wire Line
+	6750 3300 6450 3300
+Wire Wire Line
+	6750 3300 6750 3600
+Wire Wire Line
+	6850 3450 6850 3600
+Wire Wire Line
+	6950 3600 6950 3450
+$Comp
+L Device:C C5
+U 1 1 5C018CD5
+P 5750 3650
+F 0 "C5" H 5865 3696 50  0000 L CNN
+F 1 "0.1µF" H 5865 3605 50  0000 L CNN
+F 2 "official stable:C_0603_1608Metric" H 5788 3500 50  0001 C CNN
+F 3 "~" H 5750 3650 50  0001 C CNN
+	1    5750 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3150 5750 3300
+Wire Wire Line
+	5750 3300 6150 3300
+Connection ~ 5750 3300
+Wire Wire Line
+	5750 3300 5750 3450
+Wire Wire Line
+	6650 3600 6650 3450
+Wire Wire Line
+	6650 3450 5750 3450
+Connection ~ 5750 3450
+Wire Wire Line
+	5750 3450 5750 3500
+Wire Wire Line
+	5750 3800 5750 4100
+Wire Wire Line
+	5750 4100 6100 4100
+$Comp
+L Device:C C6
+U 1 1 5C01C78B
+P 8200 5150
+F 0 "C6" H 8315 5196 50  0000 L CNN
+F 1 "0.1µF" H 8315 5105 50  0000 L CNN
+F 2 "official stable:C_0603_1608Metric" H 8238 5000 50  0001 C CNN
+F 3 "~" H 8200 5150 50  0001 C CNN
+	1    8200 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5C01C7DF
+P 8650 5150
+F 0 "C7" H 8765 5196 50  0000 L CNN
+F 1 "10µF" H 8765 5105 50  0000 L CNN
+F 2 "official stable:C_0603_1608Metric" H 8688 5000 50  0001 C CNN
+F 3 "~" H 8650 5150 50  0001 C CNN
+	1    8650 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5C01C86C
+P 8650 5500
+F 0 "#PWR08" H 8650 5250 50  0001 C CNN
+F 1 "GND" H 8655 5327 50  0000 C CNN
+F 2 "" H 8650 5500 50  0001 C CNN
+F 3 "" H 8650 5500 50  0001 C CNN
+	1    8650 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 5500 8650 5400
+Wire Wire Line
+	7900 4800 8200 4800
+Wire Wire Line
+	8200 4800 8200 5000
+Wire Wire Line
+	8200 4800 8650 4800
+Wire Wire Line
+	8650 4800 8650 5000
+Connection ~ 8200 4800
+Text Label 8900 4800 0    50   ~ 0
+3V3
+Wire Wire Line
+	8900 4800 8650 4800
+Connection ~ 8650 4800
+Wire Wire Line
+	8650 5400 8200 5400
+Wire Wire Line
+	8200 5400 8200 5300
+Connection ~ 8650 5400
+Wire Wire Line
+	8650 5400 8650 5300
+Wire Wire Line
+	8200 5400 7350 5400
+Wire Wire Line
+	7350 5400 7350 5300
+Connection ~ 8200 5400
+Text Label 6100 4800 2    50   ~ 0
+RFM_DIO5
+Text Label 6650 5300 3    50   ~ 0
+RFM_RESET
+Text Label 6750 5300 3    50   ~ 0
+~RFM_SPI_CS
+Text Label 6850 5300 3    50   ~ 0
+RFM_SPI_CLK
+Text Label 7050 5300 3    50   ~ 0
+RFM_SPI_MOSI
+Text Label 7150 5300 3    50   ~ 0
+RFM_SPI_MISO
+$Comp
+L Device:C C4
+U 1 1 5C027DEA
+P 5350 4650
+F 0 "C4" H 5465 4696 50  0000 L CNN
+F 1 "0.1µF" H 5465 4605 50  0000 L CNN
+F 2 "official stable:C_0603_1608Metric" H 5388 4500 50  0001 C CNN
+F 3 "~" H 5350 4650 50  0001 C CNN
+	1    5350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5C027E4E
+P 4950 4650
+F 0 "C3" H 5065 4696 50  0000 L CNN
+F 1 "1µF" H 5065 4605 50  0000 L CNN
+F 2 "official stable:C_0603_1608Metric" H 4988 4500 50  0001 C CNN
+F 3 "~" H 4950 4650 50  0001 C CNN
+	1    4950 4650
+	1    0    0    -1  
+$EndComp
+Text Label 4800 4500 2    50   ~ 0
+3V3
+Wire Wire Line
+	4800 4500 4950 4500
+Wire Wire Line
+	4950 4500 5350 4500
+Connection ~ 4950 4500
+Wire Wire Line
+	5350 4500 6100 4500
+Connection ~ 5350 4500
+$Comp
+L power:GND #PWR05
+U 1 1 5C02C267
+P 5150 4950
+F 0 "#PWR05" H 5150 4700 50  0001 C CNN
+F 1 "GND" H 5155 4777 50  0000 C CNN
+F 2 "" H 5150 4950 50  0001 C CNN
+F 3 "" H 5150 4950 50  0001 C CNN
+	1    5150 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4800 4950 4850
+Wire Wire Line
+	4950 4850 5150 4850
+Wire Wire Line
+	5150 4850 5150 4950
+Wire Wire Line
+	5150 4850 5350 4850
+Wire Wire Line
+	5350 4850 5350 4800
+Connection ~ 5150 4850
+$Comp
+L Device:C C1
+U 1 1 5C02F66C
+P 4350 4650
+F 0 "C1" H 4465 4696 50  0000 L CNN
+F 1 "0.1µF" H 4465 4605 50  0000 L CNN
+F 2 "official stable:C_0603_1608Metric" H 4388 4500 50  0001 C CNN
+F 3 "~" H 4350 4650 50  0001 C CNN
+	1    4350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5C02F74A
+P 3850 4650
+F 0 "SW1" V 3896 4602 50  0000 R CNN
+F 1 "SW_Push" V 3805 4602 50  0000 R CNN
+F 2 "sensor-node-core:switch" H 3850 4850 50  0001 C CNN
+F 3 "" H 3850 4850 50  0001 C CNN
+	1    3850 4650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6100 4400 4350 4400
+Wire Wire Line
+	3850 4400 3850 4450
+Wire Wire Line
+	4350 4500 4350 4400
+Connection ~ 4350 4400
+Wire Wire Line
+	4350 4400 3850 4400
+Wire Wire Line
+	3850 4850 4350 4850
+Connection ~ 4950 4850
+Wire Wire Line
+	4350 4800 4350 4850
+Connection ~ 4350 4850
+Wire Wire Line
+	4350 4850 4950 4850
+Text Label 4350 4200 1    50   ~ 0
+~SWD_RESET
+Wire Wire Line
+	4350 4200 4350 4400
+Text Label 7900 4100 0    50   ~ 0
+SWD_CLK
+Text Label 7900 4200 0    50   ~ 0
+SWD_IO
+Text Label 7900 4300 0    50   ~ 0
+RFM_DIO2
+Text Label 7900 4400 0    50   ~ 0
+RFM_DIO1
+Text Label 7900 4500 0    50   ~ 0
+RFM_DIO0
+Text Label 7900 4600 0    50   ~ 0
+RFM_DIO4
+Text Label 7900 4700 0    50   ~ 0
+RFM_DIO3
 $EndSCHEMATC
