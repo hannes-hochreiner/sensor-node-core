@@ -1,4 +1,4 @@
-(module switch (layer F.Cu) (tedit 5A95BDC8)
+(module switch (layer F.Cu) (tedit 5C00F428)
   (fp_text reference SW1 (at 0 0.5) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -9,9 +9,9 @@
   (pad 2 thru_hole circle (at -3.25 2.25) (size 1.7 1.7) (drill 0.99) (layers *.Cu *.Mask))
   (pad 1 thru_hole circle (at 3.25 -2.25) (size 1.7 1.7) (drill 0.99) (layers *.Cu *.Mask))
   (pad 2 thru_hole circle (at 3.25 2.25) (size 1.7 1.7) (drill 0.99) (layers *.Cu *.Mask))
-  (model Buttons_Switches_THT.3dshapes/SW_PUSH_6mm.wrl
-    (offset (xyz -3.047999954223633 2.209799966812134 0))
-    (scale (xyz 0.39 0.39 0.39))
+  (model ../../freecad/1825910-6.step
+    (at (xyz 0 0 0))
+    (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
 )

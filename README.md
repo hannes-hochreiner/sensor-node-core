@@ -43,6 +43,12 @@ The core will contain the micro-controller (incl. debug connector and reset butt
   * [Datasheet](http://www.memoryprotectiondevices.com/datasheets/BU2032-1-G-datasheet.pdf)
   * Price: 0.89
 
+### Button
+  * TE Connectivity ALCOSWITCH Switches: 1825910-6
+  * Digi-Key: [450-1650-ND](https://www.digikey.de/product-detail/en/te-connectivity-alcoswitch-switches/1825910-6/450-1650-ND/1632536)
+  * [Datasheet](https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English)
+  * Price: 0.09
+
 ## Price
 
 Estimate: about 20 EUR

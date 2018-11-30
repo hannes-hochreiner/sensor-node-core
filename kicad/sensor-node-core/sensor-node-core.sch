@@ -109,17 +109,6 @@ Connection ~ 2050 2150
 Wire Wire Line
 	2050 2150 2050 1450
 $Comp
-L Device:Antenna_Shield AE1
-U 1 1 5C00765A
-P 4100 1950
-F 0 "AE1" H 4240 1991 50  0000 L CNN
-F 1 "Antenna_Shield" H 4240 1900 50  0000 L CNN
-F 2 "sensor-node-core:MOLEX-0732511150" H 4100 2050 50  0001 C CNN
-F 3 "~" H 4100 2050 50  0001 C CNN
-	1    4100 1950
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR04
 U 1 1 5C007733
 P 4200 2300
@@ -133,16 +122,12 @@ $EndComp
 Wire Wire Line
 	4200 2300 4200 2250
 Wire Wire Line
-	4100 2150 3300 2150
-Wire Wire Line
 	3300 2050 3700 2050
 Wire Wire Line
 	3700 2050 3700 2250
 Wire Wire Line
 	3700 2250 4200 2250
 Connection ~ 4200 2250
-Wire Wire Line
-	4200 2250 4200 2150
 Text Label 4950 1750 0    50   ~ 0
 3V3
 Text Label 3500 1450 0    50   ~ 0
@@ -549,4 +534,5 @@ Text Label 7900 4600 0    50   ~ 0
 RFM_DIO4
 Text Label 7900 4700 0    50   ~ 0
 RFM_DIO3
+NoConn ~ 3300 2150
 $EndSCHEMATC
