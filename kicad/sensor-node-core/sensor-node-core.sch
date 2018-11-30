@@ -347,8 +347,6 @@ Connection ~ 5750 3450
 Wire Wire Line
 	5750 3450 5750 3500
 Wire Wire Line
-	5750 3800 5750 4100
-Wire Wire Line
 	5750 4100 6100 4100
 $Comp
 L Device:C C6
@@ -516,8 +514,6 @@ Wire Wire Line
 Connection ~ 4350 4850
 Wire Wire Line
 	4350 4850 4950 4850
-Text Label 4350 4200 1    50   ~ 0
-~SWD_RESET
 Wire Wire Line
 	4350 4200 4350 4400
 Text Label 7900 4100 0    50   ~ 0
@@ -535,4 +531,29 @@ RFM_DIO4
 Text Label 7900 4700 0    50   ~ 0
 RFM_DIO3
 NoConn ~ 3300 2150
+Text Label 7050 3600 1    50   ~ 0
+SEN_SPI_MOSI
+Text Label 7150 3600 1    50   ~ 0
+SEN_SPI_MISO
+Text Label 7250 3600 1    50   ~ 0
+SEN_SPI_CLK
+Text Label 7350 3600 1    50   ~ 0
+~SEN_SPI_CS
+Text Label 6100 4200 2    50   ~ 0
+SEN_GPIO_1
+Text Label 6100 4300 2    50   ~ 0
+SEN_GPIO_2
+NoConn ~ 7250 5300
+NoConn ~ 6950 5300
+NoConn ~ 6100 4700
+NoConn ~ 6100 4600
+Wire Wire Line
+	5750 3800 5750 4100
+Text Label 4350 4200 1    50   ~ 0
+~SWD_RST
+Text Label 5450 4100 2    50   ~ 0
+3V3
+Wire Wire Line
+	5450 4100 5750 4100
+Connection ~ 5750 4100
 $EndSCHEMATC
