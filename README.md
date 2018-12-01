@@ -1,3 +1,5 @@
+![kicad rendering of the sensor node core](pictures/sensor-node-core_rendering.png)
+
 # Sensor Node Core
 
 This is another take on the sensor node theme.
