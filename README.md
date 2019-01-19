@@ -6,6 +6,8 @@ This is another take on the sensor node theme.
 I am planning on separating the core form the actual sensor.
 The core will contain the micro-controller (incl. debug connector and reset button), radio (incl. antenna), and battery, as well as a connector providing power, SPI, I2C, and GPIOs.
 
+![sensor node core mounted in a plastic box with sensor](pictures/sensor-node-core_mounted_sensor.jpg)
+
 ## Main parts
 
 ### STM32
